@@ -175,10 +175,10 @@ python3 scripts/new_ledger.py --dir <账本目录> --title "我的经验账本" 
 experience-ledger/
 ├── SKILL.md                      主指令：铁律、流程、边界
 ├── references/
-│   ├── 安装向导与冷启动.md        首次启用的完整流程
-│   ├── 日常出账流程.md            八步出账 SOP
-│   ├── 三层记录与标签规范.md      记录格式与标签词典
-│   └── 防翻车五条.md             五条铁律的可执行细则
+│   ├── install-guide.md           安装向导与冷启动
+│   ├── daily-ledger-flow.md       日常出账流程
+│   ├── three-layer-record.md      三层记录与标签规范
+│   └── five-pitfalls.md           防翻车五条
 ├── scripts/
 │   ├── new_ledger.py             建账本（九板块）/ 换肤
 │   ├── open_project.py           开工登记：建项目行 + 工时账行
