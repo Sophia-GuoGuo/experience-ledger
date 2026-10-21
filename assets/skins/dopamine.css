@@ -1,0 +1,62 @@
+/* dopamine 多巴胺风 —— 多巴胺配色、圆角胶囊、彩虹条。适合年轻态社媒传播。
+ */
+:root{
+  --bg:#FFF9F3;
+  --surface:#FFFFFF;
+  --surface-2:#FFF2E6;
+  --ink:#1A1A2E;
+  --ink-2:#5A5A72;
+  --ink-3:#8A8AA0;
+  --ink-4:#A9A9BC;
+  --line:#FFE1CC;
+  --line-2:#FFC9A8;
+  --bw:1.5px;
+  --shadow:0 2px 0 rgba(26,26,46,.06);
+  --radius:18px;
+  --radius-wob:18px;
+  --accent:#FF5D82;
+  --flag:#FF5D82;
+  --font:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --tag-border:#FFB3C7;
+  --stripe:rgba(255,107,138,.04);
+
+  --ok-bg:#E6F7EF;   --ok-ink:#1D9E75;
+  --info-bg:#E8F2FF; --info-ink:#378ADD;
+  --warn-bg:#FFF4E0; --warn-ink:#C97A12;
+  --danger-bg:#FFECEC;--danger-ink:#E24B4A;
+  --mute-bg:#F4F3F7; --mute-ink:#5F5E5A;
+  --mute2-bg:#F4F3F7;--mute2-ink:#8A8AA0;
+  --cont-bg:#E8F2FF; --cont-ink:#185FA5;
+  --q-bg:#FFF4E0;    --q-ink:#C97A12;
+  --pink-bg:#FFEAF0; --pink-ink:#D4537E;
+
+  --mainline-bg:#FFF6E6; --mainline-line:#FFD08A; --mainline-ink:#8A6A3A;
+  --why-bg:#FFF9F3;    --why-line:#FFD8C2;    --why-ink:#5A5A72;
+  --next-bg:#FFF6E6;   --next-line:#FFC93D;
+  --iron-bg:#FFF6E6;   --iron-line:#FF6B8A;   --iron-ink:#B0417A;
+  --code-bg:#26213F;   --code-fg:#FFF3E4;     --code-accent:#FFC93D;
+  --footer-line:#FFE1CC;--footer-ink:#A9A9BC;
+  --mk-1:#FFC93D; --mk-2:#FF6B8A; --mk-3:#3ED598;
+  --mk-4:#4DA8FF; --mk-5:#FF6B8A; --mk-6:#9B7BF5;
+}
+
+/* 招牌彩虹条：头部 3px 渐变，章节下划线同款 */
+.header{border:none;padding-bottom:20px;
+  background-image:linear-gradient(90deg,#FF6B8A,#FFC93D,#3ED598,#4DA8FF,#9B7BF5),
+                   linear-gradient(#FFFDF8,#FFFDF8);
+  background-origin:border-box;background-clip:padding-box,content-box}
+.header .wave{display:none}
+.wob1{border-radius:22px 10px 24px 12px}
+.wob2{border-radius:12px 24px 10px 22px}
+.wob3{border-radius:26px 14px 20px 16px}
+.stat{border-bottom:3px solid var(--accent)}
+.badge,.tag,.tag2{border-style:solid;border-radius:999px;font-weight:500}
+h2 .uline::after{height:6px;border-radius:999px;
+  background:linear-gradient(90deg,#FF6B8A,#FFC93D,#3ED598,#4DA8FF,#9B7BF5)}
+.timeline{border-left:2px dashed var(--line-2)}
+.tl-item::before{border:none;width:9px;height:9px;box-shadow:0 0 0 3px rgba(255,93,130,.16)}
+.tl-item.turn::before{box-shadow:0 0 0 3px rgba(255,201,61,.22)}
+.tl-item.stuck::before{box-shadow:0 0 0 3px rgba(226,75,74,.2)}
+.tb th{border-bottom:2px solid var(--accent)}
+.iron{border-width:2px}
+.code{border-radius:18px}

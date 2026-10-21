@@ -1,0 +1,50 @@
+/* handdrawn 手绘风（默认）—— 复刻郭姗账本原版：暖米色纸面、不规则手绘边框、
+ * 珊瑚粉点缀、蜡笔点时间轴、荧光笔下划线、LXGW 文楷。结构层见 base.css。
+ */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css');
+
+:root{
+  --bg:#FDF6EC;
+  --surface:#FFFDF8;
+  --surface-2:#F5E9D6;
+  --ink:#4A3F35;
+  --ink-2:#6B5D4F;
+  --ink-3:#8A7A6A;
+  --ink-4:#A08F7E;
+  --line:#D4BFA8;
+  --line-2:#C9A87C;
+  --bw:2px;
+  --shadow:3px 4px 0 rgba(74,63,53,.14);
+  --radius:14px 6px 16px 8px/8px 14px 6px 16px;
+  --accent:#FF8C7A;
+  --flag:#FF8C7A;
+  --font:"LXGW WenKai","Kaiti SC","STKaiti","Yuanti SC",serif;
+  --tag-border:#4A3F35;
+  --stripe:rgba(74,63,53,.035);
+
+  --ok-bg:#EAF3DE;   --ok-ink:#3B6D11;
+  --info-bg:#E6F1FB; --info-ink:#185FA5;
+  --warn-bg:#FAEEDA; --warn-ink:#854F0B;
+  --danger-bg:#FCEBEB;--danger-ink:#A32D2D;
+  --mute-bg:#F1EFE8; --mute-ink:#5F5E5A;
+  --mute2-bg:#F1EFE8;--mute2-ink:#888780;
+  --cont-bg:#E1F5EE; --cont-ink:#0F6E56;
+  --q-bg:#FAEEDA;    --q-ink:#854F0B;
+  --pink-bg:#F4C0D1; --pink-ink:#993556;
+
+  --mainline-bg:#EEF4F8; --mainline-line:#9FBDD1; --mainline-ink:#3F6180;
+  --why-bg:#F8F1E4;    --why-line:#D4BFA8;    --why-ink:#6B5D4F;
+  --next-bg:#F8F1E4;   --next-line:#C9A87C;
+  --iron-bg:#FFF0E8;   --iron-line:#FF8C7A;   --iron-ink:#B0543E;
+  --code-bg:#4A3F35;   --code-fg:#FFF3E4;     --code-accent:#FAC775;
+  --footer-line:#D4BFA8;--footer-ink:#B4A290;
+  --mk-1:#F0B060; --mk-2:#FF8C7A; --mk-3:#97C459;
+  --mk-4:#85B7EB; --mk-5:#F09595; --mk-6:#C0DD97;
+}
+
+/* 三种不规则圆角轮换，制造"随手摆上去"的错落感 */
+.wob1{border-radius:255px 15px 225px 15px/15px 225px 15px 255px}
+.wob2{border-radius:15px 225px 15px 255px/255px 15px 225px 15px}
+.wob3{border-radius:35px 12px 28px 14px/14px 26px 12px 32px}
+
+.tl-item::before{transform:rotate(8deg)}

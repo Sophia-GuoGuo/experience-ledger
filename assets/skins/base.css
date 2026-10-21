@@ -1,0 +1,188 @@
+/* base.css —— 结构层：经验账本的全部类名与布局（唯一模板源）
+ * 类名与郭姗账本 1:1 对应：.wob1/.card/.header/.stats/.tl-item/.tag2/.advice/.iron ...
+ * 皮肤只允许覆盖 :root 变量，不得改动本文件的类名与布局。
+ * 换肤 = 替换内联 CSS，数据与结构一字不动。
+ */
+
+:root{
+  --bg:#FDF6EC;
+  --surface:#FFFDF8;
+  --surface-2:#F5E9D6;
+  --ink:#4A3F35;
+  --ink-2:#6B5D4F;
+  --ink-3:#8A7A6A;
+  --ink-4:#A08F7E;
+  --line:#D4BFA8;
+  --line-2:#C9A87C;
+  --bw:2px;
+  --shadow:3px 4px 0 rgba(74,63,53,.14);
+  --radius:14px 6px 16px 8px/8px 14px 6px 16px;
+  --radius-wob:var(--radius);
+  --accent:#FF8C7A;
+  --flag:#FF8C7A;
+  --font:"LXGW WenKai","Kaiti SC","STKaiti","Yuanti SC",serif;
+  --tag-border:#4A3F35;
+  --stripe:transparent;
+
+  --ok-bg:#EAF3DE;   --ok-ink:#3B6D11;
+  --info-bg:#E6F1FB; --info-ink:#185FA5;
+  --warn-bg:#FAEEDA; --warn-ink:#854F0B;
+  --danger-bg:#FCEBEB;--danger-ink:#A32D2D;
+  --mute-bg:#F1EFE8; --mute-ink:#5F5E5A;
+  --mute2-bg:#F1EFE8;--mute2-ink:#888780;
+  --cont-bg:#E1F5EE; --cont-ink:#0F6E56;
+  --q-bg:#FAEEDA;    --q-ink:#854F0B;
+  --pink-bg:#F4C0D1; --pink-ink:#993556;
+
+  --mainline-bg:#EEF4F8; --mainline-line:#9FBDD1; --mainline-ink:#3F6180;
+  --why-bg:#F8F1E4;    --why-line:#D4BFA8;    --why-ink:#6B5D4F;
+  --next-bg:#F8F1E4;   --next-line:#C9A87C;
+  --iron-bg:#FFF0E8;   --iron-line:#FF8C7A;   --iron-ink:#B0543E;
+  --code-bg:#4A3F35;   --code-fg:#FFF3E4;     --code-accent:#FAC775;
+  --footer-line:#D4BFA8;--footer-ink:#B4A290;
+
+  --mk-1:#F0B060; --mk-2:#FF8C7A; --mk-3:#97C459;
+  --mk-4:#85B7EB; --mk-5:#F09595; --mk-6:#C0DD97;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.7}
+.wrap{max-width:780px;margin:0 auto;padding:24px 16px 56px}
+
+/* ---------- 不规则圆角（手绘感由皮肤覆盖） ---------- */
+.wob1,.wob2,.wob3{border-radius:var(--radius-wob)}
+
+/* ---------- 卡片与头部 ---------- */
+.card{background:var(--surface);border:var(--bw) solid var(--ink);box-shadow:var(--shadow)}
+.header{padding:22px 24px 18px;margin-bottom:18px;transform:rotate(-.25deg);position:relative}
+.header h1{font-size:24px;font-weight:600;letter-spacing:2px}
+.header h1 .paw{color:var(--accent)}
+.header p{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+.wave{display:block;margin-top:10px}
+
+/* ---------- 统计条 ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{padding:14px 8px 10px;text-align:center}
+.stat:nth-child(odd){transform:rotate(-.6deg)}
+.stat:nth-child(even){transform:rotate(.5deg)}
+.stat .num{font-size:26px;font-weight:600;color:var(--accent)}
+.stat .lab{font-size:12px;color:var(--ink-3)}
+
+/* ---------- 板块标题（蜡笔图标 + 荧光笔下划线） ---------- */
+h2{font-size:17px;margin:30px 0 12px;display:flex;align-items:center;gap:8px}
+h2 .mk{flex-shrink:0}
+h2 .uline{position:relative}
+h2 .uline::after{content:"";position:absolute;left:0;right:-4px;bottom:-4px;height:5px;
+  background:var(--flag);border-radius:10px 4px 12px 5px;transform:rotate(-.6deg)}
+.hint{font-size:12px;color:var(--ink-4);margin-bottom:10px}
+
+/* ---------- 折叠卡 ---------- */
+details{margin-bottom:12px}
+.dlist details:nth-child(odd){transform:rotate(-.3deg)}
+.dlist details:nth-child(even){transform:rotate(.25deg)}
+summary{cursor:pointer;padding:13px 16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary .pname{font-size:15px;font-weight:600}
+summary .latest{font-size:12px;color:var(--ink-4)}
+.body{padding:2px 16px 14px}
+
+/* ---------- 状态徽章 ---------- */
+.badge{font-size:11.5px;border-radius:99px 12px 99px 12px/12px 99px 12px 99px;padding:2px 11px;
+  white-space:nowrap;flex-shrink:0;border:1.5px dashed var(--tag-border);background:var(--surface)}
+.b-run{background:var(--ok-bg);color:var(--ok-ink)}
+.b-iter{background:var(--info-bg);color:var(--info-ink)}
+.b-block{background:var(--danger-bg);color:var(--danger-ink)}
+.b-plan{background:var(--mute-bg);color:var(--mute-ink)}
+.b-dep{background:var(--warn-bg);color:var(--warn-ink)}
+.b-ok{background:var(--ok-bg);color:var(--ok-ink)}
+.b-review{background:var(--danger-bg);color:var(--danger-ink)}
+.b-todo{background:var(--mute2-bg);color:var(--mute2-ink)}
+.b-cont{background:var(--cont-bg);color:var(--cont-ink)}
+.b-q{background:var(--q-bg);color:var(--q-ink)}
+
+/* ---------- 思路主线 ---------- */
+.mainline{font-size:13px;color:var(--mainline-ink);background:var(--mainline-bg);
+  border:1.5px dashed var(--mainline-line);border-radius:var(--radius);padding:8px 12px;margin:10px 0 12px}
+.mainline b{font-weight:600;color:var(--ink)}
+
+/* ---------- 时间轴 ---------- */
+.timeline{position:relative;padding-left:20px;border-left:2px dashed var(--line);margin:0 0 10px 4px}
+.tl-item{position:relative;padding-bottom:14px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-26px;top:7px;width:8px;height:8px;
+  background:var(--accent);border:1.5px solid var(--ink);border-radius:46% 54% 52% 48%/55% 45% 55% 45%}
+.tl-item.gray::before{background:var(--mute2-ink);opacity:.5}
+.tl-item.turn::before{background:var(--mk-1)}
+.tl-item.stuck::before{background:var(--danger-ink)}
+.tl-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tl-date{font-size:12px;color:var(--ink-4)}
+.tag{font-size:10.5px;border-radius:8px 4px 9px 5px;padding:0 8px;border:1px dashed var(--tag-border);background:var(--surface)}
+.g-adv{background:var(--ok-bg);color:var(--ok-ink)}
+.g-turn{background:var(--warn-bg);color:var(--warn-ink)}
+.g-stuck{background:var(--danger-bg);color:var(--danger-ink)}
+.g-dec{background:var(--info-bg);color:var(--info-ink)}
+.g-ver{background:var(--cont-bg);color:var(--cont-ink)}
+.g-les{background:var(--pink-bg);color:var(--pink-ink)}
+.tl-txt{font-size:13.5px;margin-top:3px}
+.tl-why{font-size:12.5px;color:var(--why-ink);margin-top:4px;background:var(--why-bg);
+  border:1px dashed var(--why-line);border-radius:var(--radius);padding:6px 10px}
+.tl-why b{color:var(--ink);font-weight:600}
+.tl-turn{font-size:12.5px;color:var(--warn-ink);margin-top:4px}
+.tl-turn b{font-weight:600}
+
+/* ---------- 下一步（行动出口挂在项目卡内，不设全局任务板） ---------- */
+.next{font-size:13px;color:var(--why-ink);background:var(--next-bg);border:1.5px dashed var(--next-line);
+  border-radius:var(--radius);padding:9px 12px}
+.next b{color:var(--ink)}
+
+/* ---------- 分组标题 ---------- */
+.groupt{font-size:14.5px;font-weight:600;color:var(--ink-3);margin:20px 0 8px}
+.subt{font-size:13px;color:var(--ink-4);margin:12px 0 6px}
+
+/* ---------- 周记录卡 ---------- */
+.weekhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.weekhead .wt{font-size:15px;font-weight:600}
+.weekhead .wr{font-size:11.5px;color:var(--ink-4)}
+.weekbody{padding:2px 16px 14px}
+
+/* ---------- 盒 / 列表 / 建议 ---------- */
+.box{padding:16px 18px;margin-bottom:12px}
+.box ol,.box ul{padding-left:20px}
+.box li{font-size:13.5px;margin-bottom:9px}
+.tag2{display:inline-block;font-size:11px;border-radius:8px 4px 9px 5px;padding:1px 9px;margin-right:6px;
+  border:1px dashed var(--tag-border)}
+.t-red{background:var(--danger-bg);color:var(--danger-ink)}
+.t-amber{background:var(--warn-bg);color:var(--warn-ink)}
+.t-blue{background:var(--info-bg);color:var(--info-ink)}
+.advice li{margin-bottom:14px}
+.advice .act{display:block;font-size:13.5px;margin-top:3px}
+.advice .fact{display:block;font-size:12.5px;color:var(--ink-4);margin-top:3px}
+
+/* ---------- 代码块 ---------- */
+.code{background:var(--code-bg);color:var(--code-fg);font-family:"SF Mono",Menlo,Consolas,monospace;
+  font-size:12px;border-radius:var(--radius);padding:13px 15px;overflow-x:auto;line-height:1.7;
+  margin-bottom:10px;white-space:pre-wrap}
+.code b{color:var(--code-accent);font-weight:600}
+
+/* ---------- 表格 ---------- */
+.tb{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:10px}
+.tb th{background:var(--surface-2);text-align:left;padding:6px 10px;font-weight:600;border-bottom:var(--bw) solid var(--ink)}
+.tb td{padding:6px 10px;border-bottom:1px dashed var(--line);vertical-align:top}
+.tb tr:nth-child(even) td{background:var(--stripe)}
+
+/* ---------- 铁律条 ---------- */
+.iron{background:var(--iron-bg);border:2px dashed var(--iron-line);border-radius:var(--radius);
+  padding:9px 13px;font-size:13px;color:var(--iron-ink);margin-bottom:12px}
+
+/* ---------- 页脚 ---------- */
+.footer{margin-top:32px;text-align:center;font-size:12px;color:var(--footer-ink);
+  border-top:2px dashed var(--footer-line);padding-top:16px}
+
+@media (max-width:520px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .header h1{font-size:20px}
+}
+@media print{
+  body{background:#fff}
+  .card{break-inside:avoid}
+}

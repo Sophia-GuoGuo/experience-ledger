@@ -1,0 +1,60 @@
+/* business 商务风 —— 深蓝主色、方正、栅格感。适合对外汇报与正式场合。
+ */
+:root{
+  --bg:#F4F6F9;
+  --surface:#FFFFFF;
+  --surface-2:#EDF1F7;
+  --ink:#16233A;
+  --ink-2:#41536E;
+  --ink-3:#6C7A99;
+  --ink-4:#8494AA;
+  --line:#D3DCE8;
+  --line-2:#B9C6DA;
+  --bw:1px;
+  --shadow:0 1px 3px rgba(22,35,58,.08);
+  --radius:4px;
+  --radius-wob:4px;
+  --accent:#1F3864;
+  --flag:#1F3864;
+  --font:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --tag-border:#B9C6DA;
+  --stripe:#F7F9FC;
+
+  --ok-bg:#EAF3DE;   --ok-ink:#3B6D11;
+  --info-bg:#E6F1FB; --info-ink:#185FA5;
+  --warn-bg:#FAEEDA; --warn-ink:#854F0B;
+  --danger-bg:#FCEBEB;--danger-ink:#A32D2D;
+  --mute-bg:#F1EFE8; --mute-ink:#5F5E5A;
+  --mute2-bg:#F1EFE8;--mute2-ink:#8494AA;
+  --cont-bg:#E1F5EE; --cont-ink:#0F6E56;
+  --q-bg:#FAEEDA;    --q-ink:#854F0B;
+  --pink-bg:#F4C0D1; --pink-ink:#993556;
+
+  --mainline-bg:#EDF1F7; --mainline-line:#B9C6DA; --mainline-ink:#41536E;
+  --why-bg:#F7F9FC;    --why-line:#D3DCE8;    --why-ink:#41536E;
+  --next-bg:#EDF1F7;   --next-line:#B9C6DA;
+  --iron-bg:#EDF1F7;   --iron-line:#1F3864;   --iron-ink:#16233A;
+  --code-bg:#16233A;   --code-fg:#E6EDF7;     --code-accent:#FAC775;
+  --footer-line:#D3DCE8;--footer-ink:#8494AA;
+  --mk-1:#1F3864; --mk-2:#1F3864; --mk-3:#1F3864;
+  --mk-4:#1F3864; --mk-5:#1F3864; --mk-6:#1F3864;
+}
+
+.header{background:var(--accent);border:none;transform:none}
+.header h1{color:#fff;letter-spacing:1px}
+.header h1 .paw{color:#FAC775}
+.header p{color:#C7D3E4}
+.header .wave{display:none}
+.stat{border-top:3px solid var(--accent)}
+.stat:nth-child(odd),.stat:nth-child(even){transform:none}
+.dlist details:nth-child(odd),.dlist details:nth-child(even){transform:none}
+h2{color:var(--accent);letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h2 .uline::after{height:3px;border-radius:0;transform:none;opacity:.85}
+.badge,.tag,.tag2{border-style:solid;border-radius:3px}
+.timeline{border-left:2px solid var(--line)}
+.tl-item::before{border:none;border-radius:0;transform:rotate(45deg);width:7px;height:7px}
+.tb th{background:var(--surface-2);color:var(--accent);border-bottom:2px solid var(--accent);letter-spacing:.3px}
+.mainline{border-left:3px solid var(--accent)}
+.iron{border-width:0;border-left:3px solid var(--accent)}
+.code{border-radius:4px}
+.footer{border-top:1px solid var(--line);letter-spacing:.4px}

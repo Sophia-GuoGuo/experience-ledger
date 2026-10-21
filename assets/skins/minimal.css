@@ -1,0 +1,53 @@
+/* minimal 极简风 —— 白底细线、无装饰、系统字体。适合职场人士与打印阅读。
+ * 板块与类名完全保留，只换视觉。
+ */
+:root{
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#F7F7F6;
+  --ink:#1C1917;
+  --ink-2:#57534E;
+  --ink-3:#8A857F;
+  --ink-4:#A8A29E;
+  --line:#E7E5E4;
+  --line-2:#D6D3D1;
+  --bw:1px;
+  --shadow:none;
+  --radius:8px;
+  --radius-wob:8px;
+  --accent:#78716C;
+  --flag:#78716C;
+  --font:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --tag-border:#D6D3D1;
+  --stripe:#FCFCFC;
+
+  --ok-bg:#F1F5EF;   --ok-ink:#3B6D11;
+  --info-bg:#EFF4FA; --info-ink:#185FA5;
+  --warn-bg:#FBF4EA; --warn-ink:#854F0B;
+  --danger-bg:#FBEFEF;--danger-ink:#A32D2D;
+  --mute-bg:#F5F5F4; --mute-ink:#5F5E5A;
+  --mute2-bg:#F5F5F4;--mute2-ink:#8A857F;
+  --cont-bg:#EFF4FA; --cont-ink:#0F6E56;
+  --q-bg:#FBF4EA;    --q-ink:#854F0B;
+  --pink-bg:#FAF0F3; --pink-ink:#993556;
+
+  --mainline-bg:#F7F8F9; --mainline-line:#DDE1E6; --mainline-ink:#4B5563;
+  --why-bg:#FAFAF9;    --why-line:#EAE7E4;    --why-ink:#57534E;
+  --next-bg:#FAFAF9;   --next-line:#E7E5E4;
+  --iron-bg:#FAFAF9;   --iron-line:#D6D3D1;   --iron-ink:#44403C;
+  --code-bg:#292524;   --code-fg:#FAFAF9;     --code-accent:#A8A29E;
+  --footer-line:#E7E5E4;--footer-ink:#A8A29E;
+  --mk-1:#A8A29E; --mk-2:#78716C; --mk-3:#A8A29E;
+  --mk-4:#A8A29E; --mk-5:#A8A29E; --mk-6:#A8A29E;
+}
+
+.header,.stat:nth-child(odd),.stat:nth-child(even){transform:none}
+.dlist details:nth-child(odd),.dlist details:nth-child(even){transform:none}
+h2 .uline::after{height:2px;border-radius:2px;transform:none;opacity:.45}
+.badge,.tag,.tag2{border-style:solid;border-width:1px;border-radius:6px}
+.timeline{border-left:1px solid var(--line)}
+.tl-item::before{border:none;border-radius:50%;width:6px;height:6px;transform:none}
+.tb th{border-bottom:1px solid var(--line);font-weight:500}
+.iron{border-width:1px;border-left:3px solid var(--accent)}
+.footer{border-top:1px solid var(--line)}
+.mainline{border-left:3px solid var(--line-2)}

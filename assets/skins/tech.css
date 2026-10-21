@@ -1,0 +1,60 @@
+/* tech 科技风 —— 深色底、等宽字体、网格线。面向开发者与极客用户。
+ */
+:root{
+  --bg:#0B1020;
+  --surface:#131A2E;
+  --surface-2:#1B2440;
+  --ink:#E6EAF5;
+  --ink-2:#A9B4CC;
+  --ink-3:#8492AE;
+  --ink-4:#6C7A99;
+  --line:#28324F;
+  --line-2:#3A466B;
+  --bw:1px;
+  --shadow:none;
+  --radius:10px;
+  --radius-wob:10px;
+  --accent:#5DCAA5;
+  --flag:#5DCAA5;
+  --font:"SF Mono",Menlo,Consolas,"PingFang SC",monospace;
+  --tag-border:#3A466B;
+  --stripe:rgba(255,255,255,.022);
+
+  --ok-bg:#16302B;   --ok-ink:#5DCAA5;
+  --info-bg:#152742; --info-ink:#85B7EB;
+  --warn-bg:#2E2413; --warn-ink:#EF9F27;
+  --danger-bg:#33191C;--danger-ink:#F09595;
+  --mute-bg:#1B2440; --mute-ink:#A9B4CC;
+  --mute2-bg:#1B2440;--mute2-ink:#6C7A99;
+  --cont-bg:#152742; --cont-ink:#85B7EB;
+  --q-bg:#2E2413;    --q-ink:#EF9F27;
+  --pink-bg:#331B2A; --pink-ink:#ED93B1;
+
+  --mainline-bg:#132B27; --mainline-line:#1E5747; --mainline-ink:#9FE1CB;
+  --why-bg:#141C31;    --why-line:#28324F;    --why-ink:#A9B4CC;
+  --next-bg:#132B27;   --next-line:#1E5747;
+  --iron-bg:#132B27;   --iron-line:#1D9E75;   --iron-ink:#9FE1CB;
+  --code-bg:#0A0F1C;   --code-fg:#E6EAF5;     --code-accent:#5DCAA5;
+  --footer-line:#28324F;--footer-ink:#6C7A99;
+  --mk-1:#EF9F27; --mk-2:#5DCAA5; --mk-3:#5DCAA5;
+  --mk-4:#85B7EB; --mk-5:#F09595; --mk-6:#5DCAA5;
+}
+
+body{background-image:linear-gradient(rgba(93,202,165,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(93,202,165,.04) 1px,transparent 1px);
+  background-size:28px 28px}
+.header{border-color:var(--accent)}
+.header .wave{stroke:var(--accent)}
+.header h1 .paw{color:var(--accent)}
+.header,.stat:nth-child(odd),.stat:nth-child(even){transform:none}
+.dlist details:nth-child(odd),.dlist details:nth-child(even){transform:none}
+h2{letter-spacing:1px;font-size:16px}
+h2 .uline::after{height:2px;border-radius:0;transform:none;opacity:.7}
+.badge,.tag,.tag2{border-style:solid;border-radius:4px}
+.tl-date,.tl-txt{font-size:13px}
+.timeline{border-left:1px solid var(--line)}
+.tl-item::before{border:none;border-radius:0;transform:rotate(45deg);width:6px;height:6px}
+.tb th{border-bottom:1px solid var(--accent);color:var(--accent);letter-spacing:.5px}
+.iron{border-width:1px;border-left:3px solid var(--accent)}
+.footer{border-top:1px solid var(--line)}
+.stat .num{font-variant-numeric:tabular-nums}
