@@ -405,7 +405,7 @@ def main():
         print(f"✓ {html}")
 
     print("\n下一步：")
-    print("  1. 走安装向导（references/安装向导与冷启动.md）：分类框架 / 扫描范围 / 出账时间 / 皮肤")
+    print("  1. 走安装向导（references/install-guide.md）：分类框架 / 扫描范围 / 出账时间 / 皮肤")
     print("  2. 冷启动回填：扫描历史变动与对话，起草登记表与首批时间轴")
     print("  3. 今后每有项目开工，跑 scripts/open_project.py 建工时行（开工即记工时）")
     print(f"  4. 打开 {html} 查看（本地单文件，双击即可）")
